@@ -1,0 +1,42 @@
+﻿@model InventoryWebMvc.Models.Input
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+
+    <h4>Input</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Moment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Moment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Place)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Place)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-dark mr-3" asp-route-id="@Model.Id">Back to List</a>
+    <a asp-action="Edit" class="btn btn-dark" asp-route-id="@Model.Id">Edit</a>
+</div>
